@@ -18,6 +18,12 @@ The public demo is hosted on Sites. The same static website is included in `docs
 
 The [MVP and pretotype handbook](docs/launch-kit.html) is part of the site. A [downloadable development specification](docs/MVP-and-pretotype.md) covers the two-week manual experiment, merchant pricing test, proposed data model, matching interfaces and acceptance checks.
 
+## Desktop and mobile views
+
+[View the screenshot gallery](screenshots/README.md) · [Download all screenshots](screenshots/vowstyle-desktop-mobile.zip)
+
+Full pages, matching steps, package/inquiry dialogs, vendor comparison and empty results are included. Mobile captures use a 500 CSS px responsive browser viewport.
+
 ## Run locally
 
 Requires Python 3 for the local server. Node.js 20 or later is required only for the checks. There are no npm dependencies and no build step.
