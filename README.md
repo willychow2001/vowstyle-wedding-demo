@@ -6,9 +6,9 @@ A mobile-friendly, Traditional Chinese concept demo for Hong Kong couples to dis
 
 ## Try the demo
 
-**[Open the public demo](https://vowstyle-hk-pretotype.supermama-5845.chatgpt.site)** · **[Open the MVP and trial handbook](https://vowstyle-hk-pretotype.supermama-5845.chatgpt.site/launch-kit.html)**
+**[Open the GitHub Pages demo](https://willychow2001.github.io/vowstyle-wedding-demo/)** · **[Open the MVP and trial handbook](https://willychow2001.github.io/vowstyle-wedding-demo/launch-kit.html)**
 
-The public demo is hosted on Sites. The same static website is included in `docs/`, ready for GitHub Pages. GitHub Pages still requires enabling in the repository settings; the current integration cannot change that setting.
+The public demo is hosted on GitHub Pages. Static website files are at the repository root, matching the repository's Pages configuration: `main` branch, `/ (root)`.
 
 1. Choose bridal makeup or wedding-day photography.
 2. Select one or two preferred styles.
@@ -16,7 +16,7 @@ The public demo is hosted on Sites. The same static website is included in `docs
 4. Explore the recommended sample packages.
 5. Save up to three vendors for comparison, or copy an editable inquiry message.
 
-The [MVP and pretotype handbook](docs/launch-kit.html) is part of the site. A [downloadable development specification](docs/MVP-and-pretotype.md) covers the two-week manual experiment, merchant pricing test, proposed data model, matching interfaces and acceptance checks.
+The [MVP and pretotype handbook](launch-kit.html) is part of the site. A [downloadable development specification](MVP-and-pretotype.md) covers the two-week manual experiment, merchant pricing test, proposed data model, matching interfaces and acceptance checks.
 
 ## Desktop and mobile views
 
@@ -35,7 +35,7 @@ npm start
 Open `http://localhost:3000`. Alternatively:
 
 ```sh
-python3 -m http.server 3000 --directory docs
+python3 -m http.server 3000
 ```
 
 ## Check the matching rules
@@ -49,17 +49,17 @@ The eight checks exercise service separation, budget boundaries, location eligib
 ## Repository layout
 
 ```text
-docs/
-  index.html                 Main page and matching journey
-  launch-kit.html            Founder-facing MVP and trial handbook
-  MVP-and-pretotype.md        Downloadable detailed specification
-  app.js                     Sample data and interactions
-  styles.css                 Responsive styles
-  assets/                    Three wedding mood images
-  .nojekyll                  Serve static files without Jekyll
-tests/matching.cjs           Matching rule checks
-package.json                Local run and check commands
-ASSETS.md                   Image sources and demo limitations
+index.html                 Main page and matching journey
+launch-kit.html            Founder-facing MVP and trial handbook
+MVP-and-pretotype.md        Downloadable detailed specification
+app.js                     Sample data and interactions
+styles.css                 Responsive styles
+assets/                    Three wedding mood images
+.nojekyll                  Serve static files without Jekyll
+tests/matching.cjs         Matching rule checks
+screenshots/               Desktop and mobile screenshot gallery
+package.json               Local run and check commands
+ASSETS.md                  Image sources and demo limitations
 ```
 
 ## Implemented
@@ -85,7 +85,7 @@ ASSETS.md                   Image sources and demo limitations
 
 ## Hosting on GitHub Pages
 
-In Settings → Pages, use **Deploy from a branch**, select **main**, and choose **/docs**. Changes to `docs/` are published through GitHub's Pages deployment service. No credentials belong in this repository.
+In Settings → Pages, use **Deploy from a branch**, select **main**, and choose **/ (root)**. Changes to the website files are published through GitHub's Pages deployment service. No credentials belong in this repository.
 
 ## Next validation step
 

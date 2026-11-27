@@ -4,8 +4,10 @@
   "private": true,
   "description": "Hong Kong wedding vendor style-matching pretotype and MVP handoff",
   "scripts": {
-    "test": "node --check docs/app.js && node tests/matching.cjs",
-    "start": "python3 -m http.server 3000 --directory docs"
+    "test": "node --check app.js && node tests/matching.cjs",
+    "start": "python3 -m http.server 3000"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

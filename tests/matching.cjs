@@ -1,5 +1,5 @@
 const fs=require('node:fs');const vm=require('node:vm');const assert=require('node:assert/strict');
-const src=fs.readFileSync('docs/app.js','utf8');
+const src=fs.readFileSync('app.js','utf8');
 const data=src.slice(src.indexOf('const styles='),src.indexOf('let step='));
 const fn=src.slice(src.indexOf('function matches('),src.indexOf('function card('));
 const ctx=vm.createContext({});vm.runInContext(data+'\n'+fn+'\nglobalThis.run=matches;',ctx);
