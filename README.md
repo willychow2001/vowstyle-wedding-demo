@@ -6,7 +6,9 @@ A mobile-friendly, Traditional Chinese concept demo for Hong Kong couples to dis
 
 ## Try the demo
 
-The website is published from the `docs/` directory using GitHub Pages. Once Pages has deployed, use the website link in this repository's About panel.
+**[Open the public demo](https://vowstyle-hk-pretotype.supermama-5845.chatgpt.site)** · **[Open the MVP and trial handbook](https://vowstyle-hk-pretotype.supermama-5845.chatgpt.site/launch-kit.html)**
+
+The public demo is hosted on Sites. The same static website is included in `docs/`, ready for GitHub Pages. GitHub Pages still requires enabling in the repository settings; the current integration cannot change that setting.
 
 1. Choose bridal makeup or wedding-day photography.
 2. Select one or two preferred styles.
