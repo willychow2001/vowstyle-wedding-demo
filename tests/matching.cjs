@@ -1,0 +1,15 @@
+const fs=require('node:fs');const vm=require('node:vm');const assert=require('node:assert/strict');
+const src=fs.readFileSync('docs/app.js','utf8');
+const data=src.slice(src.indexOf('const styles='),src.indexOf('let step='));
+const fn=src.slice(src.indexOf('function matches('),src.indexOf('function card('));
+const ctx=vm.createContext({});vm.runInContext(data+'\n'+fn+'\nglobalThis.run=matches;',ctx);
+const base={cat:'makeup',styles:['natural'],budget:8000,region:'all'};
+assert.deepEqual(Array.from(ctx.run(base),v=>v.id),['m4','m1','m2']);
+assert.equal(ctx.run({...base,budget:500}).length,0);
+assert.deepEqual(Array.from(ctx.run({...base,styles:['editorial'],region:'nt'}),v=>v.id),[]);
+assert.deepEqual(Array.from(ctx.run({...base,styles:['romantic'],budget:5800}),v=>v.id),['m1']);
+assert.deepEqual(Array.from(ctx.run({...base,cat:'photo',styles:['editorial'],budget:15000}),v=>v.id),[]);
+assert.deepEqual(Array.from(ctx.run({...base,cat:'photo',styles:['editorial'],budget:20000}),v=>v.id),['p3']);
+assert.deepEqual(Array.from(ctx.run({...base,styles:['romantic','natural'],budget:12000}),v=>v.id),['m1','m3','m4']);
+assert.equal(ctx.run({...base,styles:[]}).length,0);
+console.log('Passed 8 matching checks: service, budget boundary, region, style overlap, ranking and empty state.');
